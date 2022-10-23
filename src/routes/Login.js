@@ -24,23 +24,12 @@ function LoginScreen() {
 
     const response = await fetch(`${apiBaseUrl}/login`, requestOptions)
     const data = await response.json()
-    console.log(`Access token: ${data.access_token}`)
 
     localStorage.setItem('access_token', data.access_token)
 
     navigate('/dashboard')
 
-    // const peopleRequestOptions = {
-    //     method: 'GET',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         'Authorization' : `Bearer ${data.access_token}`
-    //     },
-    // }
-
-    // const peopleResponse = await fetch(`${apiBaseUrl}/people`, peopleRequestOptions)
-    // const peopleData = await peopleResponse.json()
-    // console.log(peopleData)
+    
   }
 
   return (

@@ -5,13 +5,9 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Root from "./routes/Root";
 import LoginScreen from "./routes/Login";
 import Dashboard from "./routes/Dashboard";
+import UserProfile, { loader as userProfileLoader } from "./routes/UserProfile";
 import ErrorPage from "./routes/404";
 
-function rootLoader() {
-  return  [
-      "John", "Josh", "Carina"
-    ]
-}
 
 const router = createBrowserRouter([
   {
@@ -26,7 +22,11 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
-        loader: rootLoader
+      },
+      {
+        path: "/user/:id",
+        element: <UserProfile />,
+        loader: userProfileLoader
       },
     ]
   },
