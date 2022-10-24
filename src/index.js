@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import LoginScreen from "./routes/Login";
 import Dashboard, {action as newUserAction, getPeople} from "./routes/Dashboard";

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { redirect, useLoaderData } from "react-router-dom";
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import UserCard from "../components/UserCard";
 import NewUserModal from "../components/NewUserModal";
 
@@ -22,6 +22,7 @@ export async function action({ request, params }) {
 
   const response = await fetch(`${apiBaseUrl}/people`, postRequestOptions);
   const newUserObj = await response.json();
+  return newUserObj
   // console.log('New user obj:', newUserObj);
 }
 

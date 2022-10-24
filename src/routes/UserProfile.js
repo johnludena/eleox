@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Form, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 // variables
 const accessToken = localStorage.getItem("access_token");
