@@ -1,9 +1,9 @@
 import {useState} from 'react'
-import {useNavigate } from 'react-router-dom'
+import {Link, useNavigate } from 'react-router-dom'
 
 function LoginScreen() {
-  const [username, setUsername] = useState('int@eleox.com')
-  const [password, setPassword] = useState('eleox')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ function LoginScreen() {
 
     localStorage.setItem('access_token', data.access_token)
 
-    navigate('/dashboard') 
+    navigate('/dashboard')
   }
 
   return (
@@ -35,7 +35,7 @@ function LoginScreen() {
       <h1 className="text-center text-black text-4xl mb-5">
         Welcome!
       </h1>
-      <p className="text-blacktext-lg mb-5 text-center">
+      <p className="text-black text-lg mb-5 text-center">
         You don't know it yet, but there's some good stuff on the other side.
       </p>
 
@@ -46,6 +46,7 @@ function LoginScreen() {
           placeholder="Your username"
           defaultValue={username}
           onChange={event => setUsername(event.target.value)}
+          required
         />
         <input
           className="p-2 mb-3 bg-slate-100"
@@ -53,6 +54,7 @@ function LoginScreen() {
           placeholder="Your password"
           defaultValue={password}
           onChange={event => setPassword(event.target.value)}
+          required
         />
 
         <input

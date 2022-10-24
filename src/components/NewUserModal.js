@@ -19,10 +19,10 @@ const customStyles = {
 
 export default function NewUserModal(props) {
   const [form, setForm] = useState({
-    firstName: "John",
-    lastName: "Ludena",
-    email: "johnludena@gmail.com",
-    jobTitle: "Senior Front-end Developer",
+    firstName: "",
+    lastName: "",
+    email: "",
+    jobTitle: "",
     avatar: "",
   });
 
@@ -61,6 +61,7 @@ export default function NewUserModal(props) {
             value={form.firstName}
             onChange={(e) => setForm({ ...form, firstName: e.target.value })}
             className="p-2 mb-3 bg-slate-100"
+            required
           />
           <label htmlFor="lastName">Last Name</label>
           <input
@@ -71,6 +72,7 @@ export default function NewUserModal(props) {
             value={form.lastName}
             onChange={(e) => setForm({ ...form, lastName: e.target.value })}
             className="p-2 mb-3 bg-slate-100"
+            required
           />
           <label htmlFor="email">Email address</label>
           <input
@@ -81,6 +83,7 @@ export default function NewUserModal(props) {
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             className="p-2 mb-3 bg-slate-100"
+            required
           />
           <label htmlFor="jobTitle">Job Title</label>
           <input
@@ -91,6 +94,7 @@ export default function NewUserModal(props) {
             value={form.jobTitle}
             onChange={(e) => setForm({ ...form, jobTitle: e.target.value })}
             className="p-2 mb-3 bg-slate-100"
+            required
           />
           <label htmlFor="avatar">Avatar Image URL</label>
           <input
