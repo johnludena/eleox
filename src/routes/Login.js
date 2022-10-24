@@ -27,17 +27,15 @@ function LoginScreen() {
 
     localStorage.setItem('access_token', data.access_token)
 
-    navigate('/dashboard')
-
-    
+    navigate('/dashboard') 
   }
 
   return (
     <div className="flex flex-col max-w-sm mx-auto h-screen justify-center">
-      <h1 className="text-center text-black dark:text-white text-4xl mb-5">
+      <h1 className="text-center text-black text-4xl mb-5">
         Welcome!
       </h1>
-      <p className="text-black dark:text-white text-lg mb-5 text-center">
+      <p className="text-blacktext-lg mb-5 text-center">
         You don't know it yet, but there's some good stuff on the other side.
       </p>
 

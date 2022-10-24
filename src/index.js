@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Root from "./routes/Root";
 import LoginScreen from "./routes/Login";
 import Dashboard, {action as newUserAction, getPeople} from "./routes/Dashboard";
-import UserProfile, { loader as userProfileLoader } from "./routes/UserProfile";
+import UserProfile, { getPerson } from "./routes/UserProfile";
 import { deleteUser } from "./components/UserCard";
 import ErrorPage from "./routes/404";
 
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/user/:id",
         element: <UserProfile />,
-        loader: userProfileLoader
+        loader: getPerson
       },
       {
         path: "/user/:id/destroy",
