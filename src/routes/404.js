@@ -12,10 +12,10 @@ export default function ErrorPage() {
           Woah, you are good at testing stuff!
         </h1>
         <p className="text-black text-lg mb-5 text-center">
-          Here's what went wrong: <strong>{error.statusText || error.message}</strong>
+          (Error: <strong>{error.statusText || error.message})</strong>
         </p>
 
-        <h2 className="text-black text-lg mb-5 text-center font-medium mt-6">Here's an AI-generated puppy for your troubles:</h2>
+        <h2 className="text-black text-lg mb-5 text-center font-medium mt-6">Here's an AI-generated puppy for your troubles...</h2>
 
         <figure>
           <div className="max-w-sm rounded-full overflow-hidden text-center mx-auto">
