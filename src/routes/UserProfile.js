@@ -1,10 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 
-// variables
-const accessToken = localStorage.getItem("access_token");
 const apiBaseUrl = "https://eleox-interview-api-7n5su.ondigitalocean.app";
 
 export async function getPerson({params}) {
+
+  const accessToken = localStorage.getItem("access_token");
+
   const personRequestOptions = {
     method: "GET",
     headers: {
