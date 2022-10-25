@@ -4,10 +4,11 @@ import UserCard from "../components/UserCard";
 import NewUserModal from "../components/NewUserModal";
 
 // variables
-const accessToken = localStorage.getItem("access_token");
 const apiBaseUrl = "https://eleox-interview-api-7n5su.ondigitalocean.app";
 
 export async function action({ request, params }) {
+  const accessToken = localStorage.getItem("access_token");
+
   const formData = await request.formData();
   const newUserData = Object.fromEntries(formData);
 
@@ -27,6 +28,8 @@ export async function action({ request, params }) {
 }
 
 export async function getPeople() {
+  const accessToken = localStorage.getItem("access_token");
+ 
   const peopleRequestOptions = {
     method: "GET",
     headers: {
