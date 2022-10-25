@@ -2,8 +2,8 @@ import {useState} from 'react'
 import {useNavigate } from 'react-router-dom'
 
 function LoginScreen() {
-  const [username, setUsername] = useState('int@eleox.com')
-  const [password, setPassword] = useState('eleox')
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const navigate = useNavigate()
 
