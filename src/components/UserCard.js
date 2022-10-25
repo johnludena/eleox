@@ -3,7 +3,6 @@ import { useState } from "react";
 import Modal from "react-modal";
 
 // variables
-const accessToken = localStorage.getItem("access_token");
 const apiBaseUrl = "https://eleox-interview-api-7n5su.ondigitalocean.app";
 
 const customStyles = {
@@ -19,6 +18,9 @@ const customStyles = {
 };
 
 export async function deleteUser({ params }) {
+
+  const accessToken = localStorage.getItem("access_token");
+
   console.log("Params:", params);
   const requestOptions = {
     method: "DELETE",
